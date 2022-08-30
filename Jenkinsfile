@@ -7,9 +7,9 @@ node {
         checkout scm
     }
 
-    stage('Build image') {  
+    /*stage('Build image') {  
        app = docker.build("abhidockerhub7620/argocdtest")
-    }
+    }*/
 
     stage('Test image') {
         app.inside {
