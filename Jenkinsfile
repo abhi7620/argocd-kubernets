@@ -1,6 +1,5 @@
 node {
     def app
-
      stage('Check Dummy') {
         sh 'echo "**** Dummy work *****"'
     }
@@ -8,8 +7,7 @@ node {
         checkout scm
     }
 
-    stage('Build image') {
-  
+    stage('Build image') {  
        app = docker.build("abhidockerhub7620/argocdtest")
     }
 
