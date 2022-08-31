@@ -3,12 +3,12 @@ node("kubernetsagent") {
      stage('Check Dummy') {
         sh 'echo "**** Dummy work *****"'
     }
-    /*stage('Clone repository') {
+    stage('Clone repository') {
         checkout scm
-    }*/
-	dir('CalibrationResults') {
-        git url: 'https://github.com/abhi7620/argocd-kubernets.git'
     }
+	/*dir('CalibrationResults') {
+        git url: 'https://github.com/abhi7620/argocd-kubernets.git'
+    }*/
     stage('Build image') {  
        app = docker.build("abhidockerhub7620/argocdtest")
     }
